@@ -10,5 +10,5 @@ https://pt.wikipedia.org/wiki/OpenCV
 
 
 ### References
-[gosseract](https://github.com/otiai10/gosseract/)
+[gosseract](https://github.com/otiai10/gosseract/)  
 [tesseract](https://github.com/tesseract-ocr/tesseract/wiki)
