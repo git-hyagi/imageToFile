@@ -1,0 +1,11 @@
+go.sum
+a.sh
+deploy/config.yaml
+*.swp
+*.swo
+*.crt
+*.key
+.scannerwork/
+sonarqube*
+tmp.out
+tmp.png
