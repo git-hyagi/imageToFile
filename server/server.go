@@ -21,7 +21,7 @@ const outputMetadata = `
 
 func main() {
 	http.HandleFunc("/", webPage)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8080", nil)
 }
 
 func webPage(w http.ResponseWriter, req *http.Request) {
