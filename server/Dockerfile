@@ -40,7 +40,7 @@ ENV PATH /go/bin:$PATH
 # Set Tesseract Training data location
 ENV TESSDATA_PREFIX /usr/share/tesseract-ocr/4.00/tessdata
 
-ADD server.go go.mod go.sum /go/src/imageToText/
+ADD server.go go.mod /go/src/imageToText/
 
 RUN go get github.com/otiai10/gosseract
 

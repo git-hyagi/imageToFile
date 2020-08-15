@@ -16,6 +16,12 @@ docker build -t imagetotext:latest .
 docker run -d -it -p 80:80 imagetotext:latest
 ~~~
 
+### Build on OpenShift through docker strategy
+~~~
+oc project <name of project>
+oc new-app --name=test --strategy=docker https://github.com/git-hyagi/imageToFile.git --context-dir=server
+~~~
+
 
 ### References
 [gosseract](https://github.com/otiai10/gosseract/)  
