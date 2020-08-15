@@ -48,4 +48,4 @@ RUN go install imageToText
 
 ENTRYPOINT /go/bin/imageToText
 
-EXPOSE 80
+EXPOSE 8080

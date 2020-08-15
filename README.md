@@ -20,6 +20,7 @@ docker run -d -it -p 80:80 imagetotext:latest
 ~~~
 oc project <name of project>
 oc new-app --name=test --strategy=docker https://github.com/git-hyagi/imageToFile.git --context-dir=server
+oc create route edge test --service=test
 ~~~
 
 
