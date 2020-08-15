@@ -40,7 +40,7 @@ func webPage(w http.ResponseWriter, req *http.Request) {
 		fmt.Printf("Size: %v\n", handler.Size)
 		fmt.Printf("Header: %v\n", handler.Header)
 
-		newFile, err := os.Create("tmp.png")
+		newFile, err := os.Create("/tmp/tmp.png")
 		if err != nil {
 			fmt.Println("Error (2)!" + err.Error())
 			return
@@ -58,10 +58,10 @@ func webPage(w http.ResponseWriter, req *http.Request) {
 	}
 
 	// convert image to text
-	makeText("tmp.png", "tmp.out")
+	makeText("/tmp/tmp.png", "/tmp/tmp.out")
 
 	// open the converted file
-	textedFile, err := os.Open("tmp.out")
+	textedFile, err := os.Open("/tmp/tmp.out")
 	if err != nil {
 		fmt.Println(err)
 	}
