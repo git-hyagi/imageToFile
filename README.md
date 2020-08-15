@@ -9,6 +9,14 @@ dnf install gcc-c++
 https://pt.wikipedia.org/wiki/OpenCV
 
 
+### To build and run
+~~~
+cd server
+docker build -t imagetotext:latest .
+docker run -d -it -p 80:80 imagetotext:latest
+~~~
+
+
 ### References
 [gosseract](https://github.com/otiai10/gosseract/)  
 [tesseract](https://github.com/tesseract-ocr/tesseract/wiki)

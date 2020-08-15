@@ -21,7 +21,7 @@ const outputMetadata = `
 
 func main() {
 	http.HandleFunc("/", webPage)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 func webPage(w http.ResponseWriter, req *http.Request) {
@@ -72,7 +72,7 @@ func webPage(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprint(b, "<tr><th>DATE</th><th>STORE</th><th>VALUE</th><th>KIND</th></tr>")
 
 	// parse the file according to regex
-	regexCharge := regexp.MustCompile(`^.*?(?P<date>\d{2}/\d{2})\s+(?P<store>.*)\s+(?P<value>[-]?\d+,\d{2})$`)
+	regexCharge := regexp.MustCompile(`^.*?(?P<date>\d{2}/\d{2})\s+(?P<store>.*)\s+(?P<value>[-]?\d+(\.\d{3})?,\d{2})$`)
 	for scanner.Scan() {
 		groups := map[string]string{}
 		matches := regexCharge.FindStringSubmatch(scanner.Text())
